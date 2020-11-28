@@ -1,0 +1,2 @@
+client_get /TXTTest.txt localhost 5100
+client_post /clientHTML.html localhost 5100

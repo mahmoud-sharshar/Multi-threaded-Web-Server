@@ -207,10 +207,10 @@ ClientRequest parseRequestMessage(string message)
 	bool headerFinished = false;
 	while (getline(f, line))
 	{
-		if (headerFinished)
+		if (headerFinished){
 			newRequest.data.push_back(line);
-
-		if (line.empty())
+			}
+		if (line.empty() || line.size() < 2)
 		{
 			headerFinished = true;
 		}
